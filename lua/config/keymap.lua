@@ -5,5 +5,7 @@ vim.keymap.set("n", "gl", function()
 end, { desc = "[G]o to Diagnostic in float" })
 
 vim.keymap.set("n", "<leader>cf", function()
-	require("conform").format()
+	require("conform").format({
+		lsp_format = "fallback",
+	})
 end, { desc = "[c]ode [f]ormat" })
